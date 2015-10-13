@@ -1,0 +1,22 @@
+<style>
+	div{
+		background: #e9e9e9;
+		padding: 10px;
+	}
+</style>
+<div contenteditable id="content"></div>
+
+<script>
+
+	var content = document.querySelector('#content');
+
+	var selection = window.getSelection();
+	var range = document.createRange();
+
+
+	range.setStart(content, 0);
+	range.collapse(false);
+	selection.removeAllRanges();
+	selection.addRange(range);
+
+</script>
